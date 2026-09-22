@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senan Shop — Créations au crochet faites main</title>
+<meta name="description" content="Senan Shop : sacs, tenues et accessoires au crochet faits main, pièce par pièce, avec amour.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a href="#accueil" class="logo">Senan<span>.</span>Shop</a>
+    <nav>
+      <ul class="nav-liens" id="nav-liens">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="bouton-menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-liens">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ACCUEIL -->
+  <section class="hero" id="accueil">
+    <div class="conteneur">
+      <div class="hero-texte">
+        <span class="hero-etiquette">Fait main, maille après maille</span>
+        <h1>Des créations au crochet qui racontent une histoire</h1>
+        <p>Sacs, hauts, ensembles et accessoires façonnés à la main par Senan Shop. Chaque pièce est unique, pensée pour durer et pour être portée avec fierté.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-principal">Voir les créations</a>
+          <a href="https://wa.me/2290148184893?text=Bonjour%20Senan%20Shop%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20cr%C3%A9ations." class="btn btn-secondaire" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-visuel">
+        <img src="images/17-ensemble-volante-rose.jpg" alt="Ensemble en crochet rose à volants, création Senan Shop" loading="lazy">
+        <div class="hero-vignette">
+          <img src="images/02-sac-pompons-rose.jpg" alt="Sac en crochet rose à pompons" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="apropos" id="apropos">
+    <div class="conteneur">
+      <div class="apropos-grille">
+        <a href="#" class="voir-produit" data-img="images/10-kimono-terracotta.jpg" data-titre="Kimono terracotta">
+          <img src="images/10-kimono-terracotta.jpg" alt="Kimono en crochet aux tons terracotta" loading="lazy">
+        </a>
+        <a href="#" class="voir-produit" data-img="images/14-crop-top-turquoise.jpg" data-titre="Crop top turquoise">
+          <img src="images/14-crop-top-turquoise.jpg" alt="Crop top turquoise au crochet" loading="lazy">
+        </a>
+      </div>
+      <div class="apropos-contenu">
+        <p class="hero-etiquette">Notre histoire</p>
+        <h2>Chaque maille est posée à la main, avec patience</h2>
+        <p style="margin-top:16px; color:#6B584E; font-size:1.05rem;">Senan Shop est né d'une passion pour le crochet et l'envie de proposer des pièces qui sortent de l'ordinaire : sacs sculptés, tenues graduées de couleurs, accessoires pensés pour l'été comme pour la maison. Rien n'est produit en série — chaque commande est réalisée fil après fil, à la demande.</p>
+        <ul class="valeurs">
+          <li>
+            <span class="puce">1</span>
+            <div>
+              <h3>Fait main du début à la fin</h3>
+              <p>Pas de machine, pas de raccourci : chaque pièce sort du crochet, une maille à la fois.</p>
+            </div>
+          </li>
+          <li>
+            <span class="puce">2</span>
+            <div>
+              <h3>Des couleurs qui ont du caractère</h3>
+              <p>Des teintes pastel aux tons vitaminés, chaque création est choisie pour son impact et sa douceur.</p>
+            </div>
+          </li>
+          <li>
+            <span class="puce">3</span>
+            <div>
+              <h3>Des pièces sur-mesure</h3>
+              <p>Taille, couleur, finitions : chaque commande peut être adaptée à la personne qui la portera.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="carte-fondatrice">
+          <div class="photo">
+            <img src="images/20-fondatrice-irene-senan.jpg" alt="Irène Sènan, fondatrice de Senan Shop" loading="lazy">
+          </div>
+          <div>
+            <blockquote>« Chaque pièce que je crée, je la fais comme si c'était pour moi : avec patience, et avec soin. »</blockquote>
+            <p class="signature">Irène Sènan <span>— Fondatrice de Senan Shop</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / CATALOGUE -->
+  <section class="services" id="services">
+    <div class="conteneur">
+      <div class="entete-section">
+        <p class="eyebrow">Nos créations</p>
+        <h2>Un service de crochet fait main, pour chaque envie</h2>
+        <p class="intro">Sacs, tenues, hauts et accessoires : parcourez nos réalisations et écrivez-nous sur WhatsApp pour commander la vôtre, dans la couleur et la taille de votre choix.</p>
+      </div>
+
+      <div class="filtres" id="filtres">
+        <button class="filtre actif" data-filtre="tous">Tout voir</button>
+        <button class="filtre" data-filtre="sacs">Sacs</button>
+        <button class="filtre" data-filtre="hauts-ensembles">Hauts &amp; ensembles</button>
+        <button class="filtre" data-filtre="pulls-vestes">Pulls &amp; vestes</button>
+        <button class="filtre" data-filtre="accessoires">Accessoires</button>
+      </div>
+
+      <div class="galerie" id="galerie">
+        <!-- généré aussi en secours si JS désactivé -->
+        <article class="carte-produit" data-categorie="pulls-vestes">
+          <a href="#" class="voir-produit" data-img="images/01-debardeur-filet-creme-marron.jpg" data-titre="Débardeur filet crème & marron">
+            <div class="cadre-image"><img src="images/01-debardeur-filet-creme-marron.jpg" alt="Débardeur en crochet filet crème et marron" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Pulls &amp; vestes</p>
+            <h3>Débardeur filet crème &amp; marron</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="sacs">
+          <a href="#" class="voir-produit" data-img="images/02-sac-pompons-rose.jpg" data-titre="Sac pompons rose">
+            <div class="cadre-image"><img src="images/02-sac-pompons-rose.jpg" alt="Sac à main en crochet rose avec pompons" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Sacs</p>
+            <h3>Sac pompons rose</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/03-ensemble-lace-rouge.jpg" data-titre="Ensemble lacé rouge">
+            <div class="cadre-image"><img src="images/03-ensemble-lace-rouge.jpg" alt="Ensemble corset et jupe en crochet rouge, lacé" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Ensemble lacé rouge</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="pulls-vestes">
+          <a href="#" class="voir-produit" data-img="images/04-pull-colorblock-vert.jpg" data-titre="Pull colorblock forêt">
+            <div class="cadre-image"><img src="images/04-pull-colorblock-vert.jpg" alt="Pull en crochet colorblock vert, gris et blanc" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Pulls &amp; vestes</p>
+            <h3>Pull colorblock forêt</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="sacs">
+          <a href="#" class="voir-produit" data-img="images/05-sac-noeuds-bleu.jpg" data-titre="Sac nœuds bleu ciel">
+            <div class="cadre-image"><img src="images/05-sac-noeuds-bleu.jpg" alt="Sac en crochet bleu ciel avec nœuds blancs" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Sacs</p>
+            <h3>Sac nœuds bleu ciel</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/06-ensemble-veste-short-bleu-roi.jpg" data-titre="Ensemble veste & short bleu roi">
+            <div class="cadre-image"><img src="images/06-ensemble-veste-short-bleu-roi.jpg" alt="Ensemble veste et short en crochet bleu roi et crème" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Ensemble veste &amp; short bleu roi</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="pulls-vestes">
+          <a href="#" class="voir-produit" data-img="images/07-veste-graphique-noir-blanc.jpg" data-titre="Veste graphique noir & blanc">
+            <div class="cadre-image"><img src="images/07-veste-graphique-noir-blanc.jpg" alt="Veste en crochet graphique noir et blanc, style unisexe" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Pulls &amp; vestes</p>
+            <h3>Veste graphique noir &amp; blanc</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="sacs">
+          <a href="#" class="voir-produit" data-img="images/08-sac-tresse-rose-oeil.jpg" data-titre="Sac tressé rose">
+            <div class="cadre-image"><img src="images/08-sac-tresse-rose-oeil.jpg" alt="Sac en crochet rose tressé avec breloque œil" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Sacs</p>
+            <h3>Sac tressé rose</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="accessoires">
+          <a href="#" class="voir-produit" data-img="images/09-jambieres-filet-multicolore.jpg" data-titre="Jambières filet multicolores">
+            <div class="cadre-image"><img src="images/09-jambieres-filet-multicolore.jpg" alt="Jambières en crochet filet orange, rose et blanc" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Accessoires</p>
+            <h3>Jambières filet multicolores</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="pulls-vestes">
+          <a href="#" class="voir-produit" data-img="images/10-kimono-terracotta.jpg" data-titre="Kimono terracotta">
+            <div class="cadre-image"><img src="images/10-kimono-terracotta.jpg" alt="Kimono en crochet aux tons terracotta et crème" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Pulls &amp; vestes</p>
+            <h3>Kimono terracotta</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/11-ensemble-raye-tropical.jpg" data-titre="Ensemble rayé tropical">
+            <div class="cadre-image"><img src="images/11-ensemble-raye-tropical.jpg" alt="Ensemble brassière et short en crochet rayé tropical" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Ensemble rayé tropical</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="sacs">
+          <a href="#" class="voir-produit" data-img="images/12-sac-corail-frange.jpg" data-titre="Sac corail à franges">
+            <div class="cadre-image"><img src="images/12-sac-corail-frange.jpg" alt="Sac en crochet corail tressé avec franges" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Sacs</p>
+            <h3>Sac corail à franges</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="accessoires">
+          <a href="#" class="voir-produit" data-img="images/13-mules-volantees-rose.jpg" data-titre="Mules volantées rose">
+            <div class="cadre-image"><img src="images/13-mules-volantees-rose.jpg" alt="Mules décorées de volants en crochet rose fluo" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Accessoires</p>
+            <h3>Mules volantées rose</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/14-crop-top-turquoise.jpg" data-titre="Crop top turquoise">
+            <div class="cadre-image"><img src="images/14-crop-top-turquoise.jpg" alt="Crop top en crochet turquoise, dos licou" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Crop top turquoise</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="accessoires">
+          <a href="#" class="voir-produit" data-img="images/15-bonnet-coeur-rose.jpg" data-titre="Bonnet cœur rose & blanc">
+            <div class="cadre-image"><img src="images/15-bonnet-coeur-rose.jpg" alt="Bonnet en forme de cœur, crochet rose et blanc" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Accessoires</p>
+            <h3>Bonnet cœur rose &amp; blanc</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/16-ensemble-frange-menthe.jpg" data-titre="Ensemble frangé menthe">
+            <div class="cadre-image"><img src="images/16-ensemble-frange-menthe.jpg" alt="Ensemble brassière et pantalon en crochet frangé menthe" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Ensemble frangé menthe</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/17-ensemble-volante-rose.jpg" data-titre="Ensemble volanté rose">
+            <div class="cadre-image"><img src="images/17-ensemble-volante-rose.jpg" alt="Ensemble en crochet rose avec manches volantées" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Ensemble volanté rose</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/18-duo-lace-creme-fuchsia.jpg" data-titre="Duo lacé crème & fuchsia">
+            <div class="cadre-image"><img src="images/18-duo-lace-creme-fuchsia.jpg" alt="Deux ensembles brassière et short en crochet lacé, crème et fuchsia" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Duo lacé crème &amp; fuchsia</h3>
+          </div>
+        </article>
+
+        <article class="carte-produit" data-categorie="hauts-ensembles">
+          <a href="#" class="voir-produit" data-img="images/19-bikini-orange.jpg" data-titre="Bikini orange">
+            <div class="cadre-image"><img src="images/19-bikini-orange.jpg" alt="Maillot de bain deux pièces en crochet orange" loading="lazy"></div>
+          </a>
+          <div class="info">
+            <p class="categorie">Hauts &amp; ensembles</p>
+            <h3>Bikini orange</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU SAVOIR-FAIRE -->
+  <div class="savoir-faire">
+    <div>
+      <p class="chiffre">100%</p>
+      <p class="libelle">Fait main, sans machine</p>
+    </div>
+    <div>
+      <p class="chiffre">19+</p>
+      <p class="libelle">Modèles déjà réalisés</p>
+    </div>
+    <div>
+      <p class="chiffre">Sur-mesure</p>
+      <p class="libelle">Taille et couleurs adaptables</p>
+    </div>
+  </div>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="temoignages" id="temoignages">
+    <div class="conteneur">
+      <div class="entete-section">
+        <p class="eyebrow">Elles nous font confiance</p>
+        <h2>Ce que disent nos clientes</h2>
+      </div>
+      <div class="grille-temoignages">
+        <article class="carte-temoignage">
+          <div class="etoiles">★★★★★</div>
+          <p class="citation">« Mon sac corail est encore plus beau en vrai que sur les photos. La finition est impeccable et j'ai reçu plein de compliments dès la première sortie. »</p>
+          <div class="auteur">
+            <span class="avatar">A</span>
+            <div>
+              <p class="nom">Aïcha D.</p>
+              <p class="achat">Sac corail à franges</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte-temoignage">
+          <div class="etoiles">★★★★★</div>
+          <p class="citation">« J'ai demandé mon ensemble dans une taille particulière et Senan Shop a tout adapté sans problème. Le résultat me va parfaitement. »</p>
+          <div class="auteur">
+            <span class="avatar">M</span>
+            <div>
+              <p class="nom">Mariam O.</p>
+              <p class="achat">Ensemble rayé tropical</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte-temoignage">
+          <div class="etoiles">★★★★★</div>
+          <p class="citation">« Réponse rapide sur WhatsApp, délai respecté, et le pull colorblock est aussi doux que sur la photo. Je recommande sans hésiter. »</p>
+          <div class="auteur">
+            <span class="avatar">S</span>
+            <div>
+              <p class="nom">Sandrine K.</p>
+              <p class="achat">Pull colorblock forêt</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte-temoignage">
+          <div class="etoiles">★★★★★</div>
+          <p class="citation">« C'était mon premier achat en crochet fait main et je suis conquise. On sent le soin apporté à chaque détail. »</p>
+          <div class="auteur">
+            <span class="avatar">R</span>
+            <div>
+              <p class="nom">Rachida B.</p>
+              <p class="achat">Kimono terracotta</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="conteneur">
+      <div class="carte-contact">
+        <div class="icone-grande">
+          <svg viewBox="0 0 32 32" fill="#3F7D5C" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.65 4.57 1.78 6.46L4 29l7.72-1.72a12.9 12.9 0 0 0 4.3.75h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.86h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-4.58 1.02 1.04-4.47-.24-.38a9.86 9.86 0 0 1-1.53-5.4c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.97 4.47 9.97 9.97 0 5.51-4.47 9.85-9.15 9.85zm5.46-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+          </svg>
+        </div>
+        <h2>Une envie ? Écrivons-en ensemble</h2>
+        <p>Toutes les commandes se font directement sur WhatsApp : dites-nous la pièce qui vous plaît, la couleur et la taille souhaitées, et nous vous répondons rapidement.</p>
+        <a href="https://wa.me/2290148184893?text=Bonjour%20Senan%20Shop%2C%20je%20souhaite%20passer%20une%20commande." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg class="icone-wa" viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.65 4.57 1.78 6.46L4 29l7.72-1.72a12.9 12.9 0 0 0 4.3.75h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.86h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-4.58 1.02 1.04-4.47-.24-.38a9.86 9.86 0 0 1-1.53-5.4c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.97 4.47 9.97 9.97 0 5.51-4.47 9.85-9.15 9.85zm5.46-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+          </svg>
+          Écrire sur WhatsApp
+        </a>
+        <p class="numero">+229 01 48 18 48 93</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>© 2026 Senan Shop — Créations au crochet faites main.</p>
+    <div class="reseaux">
+      <a href="https://www.facebook.com/profile.php?id=61577477150089" target="_blank" rel="noopener" aria-label="Senan Shop sur Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.25-1.5 1.6-1.5h1.7V3.3C15.9 3.2 15 3 13.9 3c-2.4 0-4 1.4-4 4.1v2.7H7.2v3.2h2.7v8h3.6z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-fermer" id="lightbox-fermer" aria-label="Fermer">&times;</button>
+  <figure>
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-titre"></figcaption>
+  </figure>
+</div>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/2290148184893" class="wa-flottant" target="_blank" rel="noopener" aria-label="Contacter Senan Shop sur WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.65 4.57 1.78 6.46L4 29l7.72-1.72a12.9 12.9 0 0 0 4.3.75h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.86h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-4.58 1.02 1.04-4.47-.24-.38a9.86 9.86 0 0 1-1.53-5.4c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.97 4.47 9.97 9.97 0 5.51-4.47 9.85-9.15 9.85zm5.46-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

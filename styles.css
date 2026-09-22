@@ -1,0 +1,813 @@
+/* =========================================================
+   Senan Shop — feuille de style
+   Palette : crème lin, rose poudré, terracotta, vert sauge
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --creme: #FAF3EC;
+  --creme-carte: #FFFDFB;
+  --encre: #4A3B34;
+  --rose: #E7A8A0;
+  --rose-fonce: #C97F79;
+  --terracotta: #C4785C;
+  --sauge: #9CAF88;
+  --ligne: #E9DDD0;
+  --ombre: rgba(74, 59, 52, 0.08);
+
+  --police-titre: 'Fraunces', serif;
+  --police-texte: 'Quicksand', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--police-texte);
+  color: var(--encre);
+  background: var(--creme);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .logo {
+  font-family: var(--police-titre);
+  font-weight: 500;
+  margin: 0;
+  color: var(--encre);
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- En-tête ---------- */
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 243, 236, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--ligne);
+}
+
+.entete .conteneur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.logo span {
+  color: var(--rose-fonce);
+}
+
+.nav-liens {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-liens a {
+  font-size: 0.98rem;
+  font-weight: 600;
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-liens a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--terracotta);
+  transition: width 0.25s ease;
+}
+
+.nav-liens a:hover::after,
+.nav-liens a:focus-visible::after {
+  width: 100%;
+}
+
+.bouton-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bouton-menu span {
+  width: 24px;
+  height: 2px;
+  background: var(--encre);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 90px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .conteneur {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-etiquette {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--rose-fonce);
+  background: #F6E4E1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  max-width: 15ch;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 1.08rem;
+  max-width: 46ch;
+  color: #6B584E;
+}
+
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-visuel {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px var(--ombre);
+}
+
+.hero-visuel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-vignette {
+  position: absolute;
+  bottom: -26px;
+  left: -26px;
+  width: 130px;
+  height: 130px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 5px solid var(--creme);
+  box-shadow: 0 14px 30px var(--ombre);
+}
+
+.hero-vignette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Boutons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 30px;
+  font-family: var(--police-texte);
+  font-weight: 700;
+  font-size: 0.98rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-principal {
+  background: var(--terracotta);
+  color: #FFF7F2;
+  box-shadow: 0 10px 24px rgba(196, 120, 92, 0.35);
+}
+
+.btn-principal:hover {
+  background: var(--rose-fonce);
+}
+
+.btn-secondaire {
+  background: transparent;
+  border-color: var(--encre);
+  color: var(--encre);
+}
+
+.btn-secondaire:hover {
+  background: var(--encre);
+  color: var(--creme);
+}
+
+.btn-whatsapp {
+  background: #3F7D5C;
+  color: #fff;
+}
+
+.btn-whatsapp:hover { background: #33654A; }
+
+.icone-wa {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ---------- Sections génériques ---------- */
+
+section { padding: 90px 0; }
+
+.entete-section {
+  max-width: 60ch;
+  margin-bottom: 48px;
+}
+
+.entete-section p.eyebrow {
+  color: var(--rose-fonce);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.entete-section h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+}
+
+.entete-section .intro {
+  margin-top: 14px;
+  color: #6B584E;
+  font-size: 1.05rem;
+}
+
+/* ---------- À propos ---------- */
+
+.apropos { background: var(--creme-carte); }
+
+.apropos .conteneur {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.apropos-grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.apropos-grille img {
+  border-radius: 14px;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.apropos-grille a:nth-child(2) {
+  margin-top: 26px;
+}
+
+.valeurs {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.valeurs li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.valeurs .puce {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #F6E4E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--police-titre);
+  color: var(--rose-fonce);
+}
+
+.valeurs h3 {
+  font-size: 1.05rem;
+  margin-bottom: 3px;
+}
+
+.valeurs p {
+  margin: 0;
+  color: #6B584E;
+  font-size: 0.97rem;
+}
+
+/* ---------- Fondatrice ---------- */
+
+.carte-fondatrice {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ligne);
+}
+
+.carte-fondatrice .photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--creme-carte);
+  box-shadow: 0 10px 22px var(--ombre);
+}
+
+.carte-fondatrice .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carte-fondatrice blockquote {
+  margin: 0 0 8px;
+  font-family: var(--police-titre);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--encre);
+  line-height: 1.5;
+}
+
+.carte-fondatrice .signature {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--rose-fonce);
+}
+
+.carte-fondatrice .signature span {
+  font-weight: 500;
+  color: #8A7A6E;
+}
+
+@media (max-width: 560px) {
+  .carte-fondatrice { flex-direction: column; text-align: center; }
+}
+
+/* ---------- Services / Catalogue ---------- */
+
+.filtres {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filtre {
+  border: 1.5px solid var(--ligne);
+  background: var(--creme-carte);
+  color: var(--encre);
+  padding: 9px 18px;
+  border-radius: 22px;
+  font-family: var(--police-texte);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtre:hover { border-color: var(--terracotta); }
+
+.filtre.actif {
+  background: var(--encre);
+  border-color: var(--encre);
+  color: var(--creme);
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.carte-produit {
+  background: var(--creme-carte);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--ligne);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.carte-produit:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px var(--ombre);
+}
+
+.carte-produit .cadre-image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #EFE6DB;
+}
+
+.carte-produit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.carte-produit:hover img { transform: scale(1.05); }
+
+.carte-produit .info {
+  padding: 16px 18px 20px;
+}
+
+.carte-produit .categorie {
+  font-size: 0.78rem;
+  text-transform: none;
+  color: var(--rose-fonce);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.carte-produit h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.carte-produit[hidden] { display: none; }
+
+/* ---------- Bandeau savoir-faire ---------- */
+
+.savoir-faire {
+  background: var(--sauge);
+  background: linear-gradient(135deg, #A9BC97, #93A87F);
+  color: #F5F5EE;
+  border-radius: 22px;
+  padding: 56px;
+  margin: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.savoir-faire .chiffre {
+  font-family: var(--police-titre);
+  font-size: 2.4rem;
+}
+
+.savoir-faire .libelle {
+  font-size: 0.95rem;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* ---------- Témoignages ---------- */
+
+.temoignages { background: var(--creme); }
+
+.grille-temoignages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.carte-temoignage {
+  background: var(--creme-carte);
+  border: 1px solid var(--ligne);
+  border-radius: 18px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.carte-temoignage .etoiles {
+  color: var(--terracotta);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.carte-temoignage p.citation {
+  margin: 0;
+  color: #5A4A40;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.carte-temoignage .auteur {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carte-temoignage .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #F6E4E1;
+  color: var(--rose-fonce);
+  font-family: var(--police-titre);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.carte-temoignage .nom {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.carte-temoignage .achat {
+  font-size: 0.85rem;
+  color: #8A7A6E;
+}
+
+@media (max-width: 900px) {
+  .grille-temoignages { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .grille-temoignages { grid-template-columns: 1fr; }
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+  background: var(--creme-carte);
+}
+
+.carte-contact {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid var(--ligne);
+  border-radius: 24px;
+  padding: 56px 40px;
+  box-shadow: 0 30px 60px var(--ombre);
+}
+
+.carte-contact .icone-grande {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 22px;
+  background: #E8F3EC;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carte-contact .icone-grande svg { width: 28px; height: 28px; }
+
+.carte-contact h2 { font-size: 1.8rem; }
+
+.carte-contact p {
+  color: #6B584E;
+  margin: 14px 0 30px;
+}
+
+.carte-contact .numero {
+  margin-top: 18px;
+  font-size: 0.92rem;
+  color: #8A7A6E;
+}
+
+/* ---------- Pied de page ---------- */
+
+.pied {
+  border-top: 1px solid var(--ligne);
+  padding: 36px 0;
+}
+
+.pied .conteneur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #8A7A6E;
+}
+
+.pied .reseaux {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.pied .reseaux a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--creme-carte);
+  border: 1px solid var(--ligne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pied .reseaux a:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.pied .reseaux a:hover svg path {
+  fill: #fff;
+}
+
+.pied .reseaux svg {
+  width: 17px;
+  height: 17px;
+}
+
+.pied .reseaux svg path {
+  fill: var(--encre);
+  transition: fill 0.2s ease;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 22, 18, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox.ouverte {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: 640px;
+  width: 100%;
+}
+
+.lightbox img {
+  border-radius: 12px;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  background: #111;
+}
+
+.lightbox figcaption {
+  color: #F5EDE6;
+  text-align: center;
+  margin-top: 16px;
+  font-family: var(--police-titre);
+  font-size: 1.1rem;
+}
+
+.lightbox-fermer {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #F5EDE6;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- Bouton WhatsApp flottant ---------- */
+
+.wa-flottant {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #3F7D5C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(63, 125, 92, 0.4);
+  z-index: 40;
+  transition: transform 0.2s ease;
+}
+
+.wa-flottant:hover { transform: scale(1.08); }
+
+.wa-flottant svg { width: 28px; height: 28px; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero .conteneur,
+  .apropos .conteneur {
+    grid-template-columns: 1fr;
+  }
+  .apropos .conteneur { text-align: left; }
+  .hero-visuel { order: -1; max-width: 420px; margin: 0 auto; }
+  .galerie { grid-template-columns: repeat(2, 1fr); }
+  .savoir-faire { grid-template-columns: 1fr; text-align: center; padding: 40px 28px; }
+}
+
+@media (max-width: 720px) {
+  .nav-liens {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--creme);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--ligne);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-liens.ouvert { max-height: 300px; }
+  .nav-liens li { width: 100%; }
+  .nav-liens a {
+    display: block;
+    padding: 16px 24px;
+  }
+  .bouton-menu { display: flex; }
+  .galerie { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  section { padding: 64px 0; }
+  .carte-contact { padding: 40px 26px; }
+  .hero { padding: 50px 0 50px; }
+  .hero-vignette { display: none; }
+}
+
+@media (max-width: 480px) {
+  .galerie { grid-template-columns: 1fr 1fr; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+}
